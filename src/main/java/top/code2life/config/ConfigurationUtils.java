@@ -79,7 +79,10 @@ public class ConfigurationUtils {
         if (!StringUtils.hasText(str)) {
             throw new IllegalArgumentException("wrong parameters when processing path");
         }
-        str = str.toLowerCase();
+
+        // in case of case-sensitive file-system, comment next line
+        // str = str.toLowerCase();
+
         boolean beginWithRelative = str.length() > 2 && (str.startsWith("./") || str.startsWith(".\\"));
         if (beginWithRelative) {
             return str.substring(2).replaceAll("\\\\", "/");
