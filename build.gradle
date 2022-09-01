@@ -73,6 +73,7 @@ publishing {
             }
         }
     }
+    /*
     repositories {
         maven {
             // change URLs to point to your repos, e.g. http://my.org/repo
@@ -85,11 +86,14 @@ publishing {
             }
         }
     }
+    */
 }
 
+/*
 signing {
     sign publishing.publications.mavenJava
 }
+*/
 
 javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
